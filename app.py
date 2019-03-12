@@ -17,5 +17,10 @@ def dice():
     return render_template('dice.html', result=result)
 
 
+@app.route('/greet/<name>', methods=['GET'])
+def greet(name):
+    return render_template('user_name.html', name=name)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
